@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */; };
+		1A61C4442B29301B00C51388 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4432B29301B00C51388 /* ContentView.swift */; };
+		1A61C4462B29301C00C51388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A61C4452B29301C00C51388 /* Assets.xcassets */; };
+		1A61C4492B29301C00C51388 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A61C4482B29301C00C51388 /* Preview Assets.xcassets */; };
+		1A61C4542B29301D00C51388 /* RayTracerChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4532B29301D00C51388 /* RayTracerChallengeTests.swift */; };
+		1A61C45E2B29301D00C51388 /* RayTracerChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C45D2B29301D00C51388 /* RayTracerChallengeUITests.swift */; };
+		1A61C4602B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C45F2B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A61C4502B29301D00C51388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A61C4362B29301B00C51388 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A61C43D2B29301B00C51388;
+			remoteInfo = RayTracerChallenge;
+		};
+		1A61C45A2B29301D00C51388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A61C4362B29301B00C51388 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A61C43D2B29301B00C51388;
+			remoteInfo = RayTracerChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A61C43E2B29301B00C51388 /* RayTracerChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayTracerChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeApp.swift; sourceTree = "<group>"; };
+		1A61C4432B29301B00C51388 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A61C4452B29301C00C51388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A61C4482B29301C00C51388 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A61C44A2B29301C00C51388 /* RayTracerChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RayTracerChallenge.entitlements; sourceTree = "<group>"; };
+		1A61C44F2B29301D00C51388 /* RayTracerChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RayTracerChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A61C4532B29301D00C51388 /* RayTracerChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeTests.swift; sourceTree = "<group>"; };
+		1A61C4592B29301D00C51388 /* RayTracerChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RayTracerChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A61C45D2B29301D00C51388 /* RayTracerChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeUITests.swift; sourceTree = "<group>"; };
+		1A61C45F2B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A61C43B2B29301B00C51388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A61C44C2B29301D00C51388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A61C4562B29301D00C51388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A61C4352B29301B00C51388 = {
+			isa = PBXGroup;
+			children = (
+				1A61C4402B29301B00C51388 /* RayTracerChallenge */,
+				1A61C4522B29301D00C51388 /* RayTracerChallengeTests */,
+				1A61C45C2B29301D00C51388 /* RayTracerChallengeUITests */,
+				1A61C43F2B29301B00C51388 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A61C43F2B29301B00C51388 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A61C43E2B29301B00C51388 /* RayTracerChallenge.app */,
+				1A61C44F2B29301D00C51388 /* RayTracerChallengeTests.xctest */,
+				1A61C4592B29301D00C51388 /* RayTracerChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A61C4402B29301B00C51388 /* RayTracerChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */,
+				1A61C4432B29301B00C51388 /* ContentView.swift */,
+				1A61C4452B29301C00C51388 /* Assets.xcassets */,
+				1A61C44A2B29301C00C51388 /* RayTracerChallenge.entitlements */,
+				1A61C4472B29301C00C51388 /* Preview Content */,
+			);
+			path = RayTracerChallenge;
+			sourceTree = "<group>";
+		};
+		1A61C4472B29301C00C51388 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1A61C4482B29301C00C51388 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A61C4522B29301D00C51388 /* RayTracerChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A61C4532B29301D00C51388 /* RayTracerChallengeTests.swift */,
+			);
+			path = RayTracerChallengeTests;
+			sourceTree = "<group>";
+		};
+		1A61C45C2B29301D00C51388 /* RayTracerChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A61C45D2B29301D00C51388 /* RayTracerChallengeUITests.swift */,
+				1A61C45F2B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift */,
+			);
+			path = RayTracerChallengeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A61C43D2B29301B00C51388 /* RayTracerChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A61C4632B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallenge" */;
+			buildPhases = (
+				1A61C43A2B29301B00C51388 /* Sources */,
+				1A61C43B2B29301B00C51388 /* Frameworks */,
+				1A61C43C2B29301B00C51388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RayTracerChallenge;
+			productName = RayTracerChallenge;
+			productReference = 1A61C43E2B29301B00C51388 /* RayTracerChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A61C44E2B29301D00C51388 /* RayTracerChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A61C4662B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallengeTests" */;
+			buildPhases = (
+				1A61C44B2B29301D00C51388 /* Sources */,
+				1A61C44C2B29301D00C51388 /* Frameworks */,
+				1A61C44D2B29301D00C51388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A61C4512B29301D00C51388 /* PBXTargetDependency */,
+			);
+			name = RayTracerChallengeTests;
+			productName = RayTracerChallengeTests;
+			productReference = 1A61C44F2B29301D00C51388 /* RayTracerChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A61C4582B29301D00C51388 /* RayTracerChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A61C4692B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallengeUITests" */;
+			buildPhases = (
+				1A61C4552B29301D00C51388 /* Sources */,
+				1A61C4562B29301D00C51388 /* Frameworks */,
+				1A61C4572B29301D00C51388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A61C45B2B29301D00C51388 /* PBXTargetDependency */,
+			);
+			name = RayTracerChallengeUITests;
+			productName = RayTracerChallengeUITests;
+			productReference = 1A61C4592B29301D00C51388 /* RayTracerChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A61C4362B29301B00C51388 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					1A61C43D2B29301B00C51388 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					1A61C44E2B29301D00C51388 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 1A61C43D2B29301B00C51388;
+					};
+					1A61C4582B29301D00C51388 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 1A61C43D2B29301B00C51388;
+					};
+				};
+			};
+			buildConfigurationList = 1A61C4392B29301B00C51388 /* Build configuration list for PBXProject "RayTracerChallenge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A61C4352B29301B00C51388;
+			productRefGroup = 1A61C43F2B29301B00C51388 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A61C43D2B29301B00C51388 /* RayTracerChallenge */,
+				1A61C44E2B29301D00C51388 /* RayTracerChallengeTests */,
+				1A61C4582B29301D00C51388 /* RayTracerChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A61C43C2B29301B00C51388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A61C4492B29301C00C51388 /* Preview Assets.xcassets in Resources */,
+				1A61C4462B29301C00C51388 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A61C44D2B29301D00C51388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A61C4572B29301D00C51388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A61C43A2B29301B00C51388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A61C4442B29301B00C51388 /* ContentView.swift in Sources */,
+				1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A61C44B2B29301D00C51388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A61C4542B29301D00C51388 /* RayTracerChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A61C4552B29301D00C51388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A61C4602B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift in Sources */,
+				1A61C45E2B29301D00C51388 /* RayTracerChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A61C4512B29301D00C51388 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A61C43D2B29301B00C51388 /* RayTracerChallenge */;
+			targetProxy = 1A61C4502B29301D00C51388 /* PBXContainerItemProxy */;
+		};
+		1A61C45B2B29301D00C51388 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A61C43D2B29301B00C51388 /* RayTracerChallenge */;
+			targetProxy = 1A61C45A2B29301D00C51388 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A61C4612B29301D00C51388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A61C4622B29301D00C51388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1A61C4642B29301D00C51388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RayTracerChallenge/RayTracerChallenge.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RayTracerChallenge/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1A61C4652B29301D00C51388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RayTracerChallenge/RayTracerChallenge.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RayTracerChallenge/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1A61C4672B29301D00C51388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayTracerChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RayTracerChallenge";
+			};
+			name = Debug;
+		};
+		1A61C4682B29301D00C51388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayTracerChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RayTracerChallenge";
+			};
+			name = Release;
+		};
+		1A61C46A2B29301D00C51388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RayTracerChallenge;
+			};
+			name = Debug;
+		};
+		1A61C46B2B29301D00C51388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RayTracerChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A61C4392B29301B00C51388 /* Build configuration list for PBXProject "RayTracerChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A61C4612B29301D00C51388 /* Debug */,
+				1A61C4622B29301D00C51388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A61C4632B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A61C4642B29301D00C51388 /* Debug */,
+				1A61C4652B29301D00C51388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A61C4662B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A61C4672B29301D00C51388 /* Debug */,
+				1A61C4682B29301D00C51388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A61C4692B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A61C46A2B29301D00C51388 /* Debug */,
+				1A61C46B2B29301D00C51388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A61C4362B29301B00C51388 /* Project object */;
+}
