@@ -18,6 +18,8 @@
 		1A61C4702B29324C00C51388 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C46F2B29324C00C51388 /* Vector.swift */; };
 		1A61C4722B29351000C51388 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4712B29351000C51388 /* Helpers.swift */; };
 		1A61C4742B2A6C7B00C51388 /* Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4732B2A6C7B00C51388 /* Tick.swift */; };
+		1A61C4762B2BAA9900C51388 /* RTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4752B2BAA9900C51388 /* RTColor.swift */; };
+		1A61C4782B2BBCF900C51388 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4772B2BBCF900C51388 /* ColorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A61C43E2B29301B00C51388 /* RayTracerChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayTracerChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A61C43E2B29301B00C51388 /* RayTracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayTracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeApp.swift; sourceTree = "<group>"; };
 		1A61C4432B29301B00C51388 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A61C4452B29301C00C51388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		1A61C46F2B29324C00C51388 /* Vector.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; tabWidth = 2; };
 		1A61C4712B29351000C51388 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		1A61C4732B2A6C7B00C51388 /* Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tick.swift; sourceTree = "<group>"; };
+		1A61C4752B2BAA9900C51388 /* RTColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTColor.swift; sourceTree = "<group>"; };
+		1A61C4772B2BBCF900C51388 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +97,7 @@
 		1A61C43F2B29301B00C51388 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A61C43E2B29301B00C51388 /* RayTracerChallenge.app */,
+				1A61C43E2B29301B00C51388 /* RayTracer.app */,
 				1A61C44F2B29301D00C51388 /* RayTracerChallengeTests.xctest */,
 				1A61C4592B29301D00C51388 /* RayTracerChallengeUITests.xctest */,
 			);
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1A61C4532B29301D00C51388 /* TupleTests.swift */,
+				1A61C4772B2BBCF900C51388 /* ColorTests.swift */,
 			);
 			path = RayTracerChallengeTests;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				1A61C46F2B29324C00C51388 /* Vector.swift */,
 				1A61C4712B29351000C51388 /* Helpers.swift */,
 				1A61C4732B2A6C7B00C51388 /* Tick.swift */,
+				1A61C4752B2BAA9900C51388 /* RTColor.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -152,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A61C43D2B29301B00C51388 /* RayTracerChallenge */ = {
+		1A61C43D2B29301B00C51388 /* RayTracer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A61C4632B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallenge" */;
+			buildConfigurationList = 1A61C4632B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracer" */;
 			buildPhases = (
 				1A61C43A2B29301B00C51388 /* Sources */,
 				1A61C43B2B29301B00C51388 /* Frameworks */,
@@ -164,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = RayTracerChallenge;
+			name = RayTracer;
 			productName = RayTracerChallenge;
-			productReference = 1A61C43E2B29301B00C51388 /* RayTracerChallenge.app */;
+			productReference = 1A61C43E2B29301B00C51388 /* RayTracer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1A61C44E2B29301D00C51388 /* RayTracerChallengeTests */ = {
@@ -241,7 +247,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A61C43D2B29301B00C51388 /* RayTracerChallenge */,
+				1A61C43D2B29301B00C51388 /* RayTracer */,
 				1A61C44E2B29301D00C51388 /* RayTracerChallengeTests */,
 				1A61C4582B29301D00C51388 /* RayTracerChallengeUITests */,
 			);
@@ -283,6 +289,7 @@
 				1A61C4442B29301B00C51388 /* ContentView.swift in Sources */,
 				1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */,
 				1A61C4702B29324C00C51388 /* Vector.swift in Sources */,
+				1A61C4762B2BAA9900C51388 /* RTColor.swift in Sources */,
 				1A61C4722B29351000C51388 /* Helpers.swift in Sources */,
 				1A61C46E2B29317600C51388 /* Point.swift in Sources */,
 			);
@@ -293,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A61C4542B29301D00C51388 /* TupleTests.swift in Sources */,
+				1A61C4782B2BBCF900C51388 /* ColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		1A61C4512B29301D00C51388 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1A61C43D2B29301B00C51388 /* RayTracerChallenge */;
+			target = 1A61C43D2B29301B00C51388 /* RayTracer */;
 			targetProxy = 1A61C4502B29301D00C51388 /* PBXContainerItemProxy */;
 		};
 		1A61C45B2B29301D00C51388 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1A61C43D2B29301B00C51388 /* RayTracerChallenge */;
+			target = 1A61C43D2B29301B00C51388 /* RayTracer */;
 			targetProxy = 1A61C45A2B29301D00C51388 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -453,13 +461,14 @@
 				DEVELOPMENT_TEAM = A338EGZ6J8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ray Tracer";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -480,13 +489,14 @@
 				DEVELOPMENT_TEAM = A338EGZ6J8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ray Tracer";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracerChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = me.annahope.RayTracer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -507,7 +517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayTracerChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RayTracerChallenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayTracer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RayTracer";
 			};
 			name = Debug;
 		};
@@ -525,7 +535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayTracerChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RayTracerChallenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayTracer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RayTracer";
 			};
 			name = Release;
 		};
@@ -573,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A61C4632B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracerChallenge" */ = {
+		1A61C4632B29301D00C51388 /* Build configuration list for PBXNativeTarget "RayTracer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A61C4642B29301D00C51388 /* Debug */,

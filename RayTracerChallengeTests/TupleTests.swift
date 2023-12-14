@@ -7,7 +7,7 @@
 
 import XCTest
 
-@testable import RayTracerChallenge
+@testable import RayTracer
 
 final class TupleTests: XCTestCase {
 
