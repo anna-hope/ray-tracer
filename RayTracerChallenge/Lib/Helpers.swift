@@ -15,6 +15,5 @@ func equal(_ a: Double, _ b: Double) -> Bool {
 }
 
 func equal_simd(_ a: simd_double3, _ b: simd_double3) -> Bool {
-    return equal(a.x, b.x) && equal(a.y, b.y) && equal(a.z, b.z) 
+  return equal(a.x, b.x) && equal(a.y, b.y) && equal(a.z, b.z)
 }
-

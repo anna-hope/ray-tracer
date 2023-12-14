@@ -118,26 +118,27 @@ final class TupleTests: XCTestCase {
 
   func testNormalizeVector() {
     let vectors = [Vector(x: 4, y: 0, z: 0), Vector(x: 1, y: 2, z: 3)]
-    let expectedResults = [Vector(x: 1, y: 0, z: 0),
-                           Vector(x: 1/14.squareRoot(), y: 2/14.squareRoot(), z: 3/14.squareRoot())]
+    let expectedResults = [
+      Vector(x: 1, y: 0, z: 0),
+      Vector(x: 1 / 14.squareRoot(), y: 2 / 14.squareRoot(), z: 3 / 14.squareRoot()),
+    ]
     for (vector, expected) in zip(vectors, expectedResults) {
       XCTAssertEqual(vector.norm(), expected)
     }
   }
-  
+
   func testDotProduct() {
     let a = Vector(x: 1, y: 2, z: 3)
     let b = Vector(x: 2, y: 3, z: 4)
     XCTAssertEqual(a ** b, 20)
   }
-  
+
   func testCrossProduct() {
     let a = Vector(x: 1, y: 2, z: 3)
     let b = Vector(x: 2, y: 3, z: 4)
     XCTAssertEqual(a !! b, Vector(x: -1, y: 2, z: -1))
     XCTAssertEqual(b !! a, Vector(x: 1, y: -2, z: 1))
   }
-  
 
   //    func testPerformanceExample() throws {
   //        // This is an example of a performance test case.

@@ -11,7 +11,7 @@ import SwiftUI
 struct RayTracerChallengeApp: App {
   var body: some Scene {
     WindowGroup {
-        ContentView().navigationTitle("Ray Tracer")
+      ContentView().navigationTitle("Ray Tracer")
     }
   }
 }
