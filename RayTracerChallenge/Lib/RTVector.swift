@@ -15,7 +15,7 @@ enum VectorError: Error {
 infix operator **  // dot
 infix operator !!  // cross
 
-struct Vector: Equatable {
+struct RTVector: Equatable {
   var simd_repr: simd_double3
 
   var x: Double {
@@ -38,28 +38,28 @@ struct Vector: Equatable {
     self.simd_repr = simd_repr
   }
 
-  static func == (lhs: Vector, rhs: Vector) -> Bool {
+  static func == (lhs: RTVector, rhs: RTVector) -> Bool {
     return equal_simd(lhs.simd_repr, rhs.simd_repr)
   }
 
-  static func + (lhs: Vector, rhs: Vector) -> Vector {
-    return Vector(lhs.simd_repr + rhs.simd_repr)
+  static func + (lhs: RTVector, rhs: RTVector) -> RTVector {
+    return RTVector(lhs.simd_repr + rhs.simd_repr)
   }
 
-  static func - (lhs: Vector, rhs: Vector) -> Vector {
-    return Vector(lhs.simd_repr - rhs.simd_repr)
+  static func - (lhs: RTVector, rhs: RTVector) -> RTVector {
+    return RTVector(lhs.simd_repr - rhs.simd_repr)
   }
 
-  static prefix func - (this: Vector) -> Vector {
-    return Vector(-this.simd_repr)
+  static prefix func - (this: RTVector) -> RTVector {
+    return RTVector(-this.simd_repr)
   }
 
-  static func * (lhs: Vector, rhs: Double) -> Vector {
-    return Vector(lhs.simd_repr * rhs)
+  static func * (lhs: RTVector, rhs: Double) -> RTVector {
+    return RTVector(lhs.simd_repr * rhs)
   }
 
-  static func / (lhs: Vector, rhs: Double) -> Vector {
-    return Vector(lhs.simd_repr / rhs)
+  static func / (lhs: RTVector, rhs: Double) -> RTVector {
+    return RTVector(lhs.simd_repr / rhs)
   }
 
   static func ** (lhs: Self, rhs: Self) -> Double {
@@ -67,10 +67,10 @@ struct Vector: Equatable {
   }
 
   static func !! (lhs: Self, rhs: Self) -> Self {
-    return Vector(cross(lhs.simd_repr, rhs.simd_repr))
+    return RTVector(cross(lhs.simd_repr, rhs.simd_repr))
   }
 
   func norm() -> Self {
-    return Vector(normalize(self.simd_repr))
+    return RTVector(normalize(self.simd_repr))
   }
 }

@@ -8,15 +8,15 @@
 import Foundation
 
 struct Projectile {
-  var position: Point
-  var velocity: Vector
+  var position: RTPoint
+  var velocity: RTVector
 }
 
 struct Environment {
-  private var gravity: Vector
-  private var wind: Vector
+  private var gravity: RTVector
+  private var wind: RTVector
 
-  init(gravity: Vector, wind: Vector) {
+  init(gravity: RTVector, wind: RTVector) {
     self.gravity = gravity
     self.wind = wind
   }

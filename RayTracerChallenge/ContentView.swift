@@ -91,25 +91,25 @@ struct ContentView: View {
     self.runSimulationButtonDisabled = true
     self.showTicks = true
 
-    let position = Point(
+    let position = RTPoint(
       x: Double(self.position_x)!,
       y: Double(self.position_y)!,
       z: Double(self.position_z)!
     )
 
-    let velocity = Vector(
+    let velocity = RTVector(
       x: Double(self.velocity_x)!,
       y: Double(self.velocity_y)!,
       z: Double(self.velocity_z)!
     )
 
-    let gravity = Vector(
+    let gravity = RTVector(
       x: Double(self.gravity_x)!,
       y: Double(self.gravity_y)!,
       z: Double(self.gravity_z)!
     )
 
-    let wind = Vector(
+    let wind = RTVector(
       x: Double(self.wind_x)!,
       y: Double(self.wind_y)!,
       z: Double(self.wind_z)!
