@@ -11,9 +11,13 @@
 		1A61C4442B29301B00C51388 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4432B29301B00C51388 /* ContentView.swift */; };
 		1A61C4462B29301C00C51388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A61C4452B29301C00C51388 /* Assets.xcassets */; };
 		1A61C4492B29301C00C51388 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A61C4482B29301C00C51388 /* Preview Assets.xcassets */; };
-		1A61C4542B29301D00C51388 /* RayTracerChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4532B29301D00C51388 /* RayTracerChallengeTests.swift */; };
+		1A61C4542B29301D00C51388 /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4532B29301D00C51388 /* TupleTests.swift */; };
 		1A61C45E2B29301D00C51388 /* RayTracerChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C45D2B29301D00C51388 /* RayTracerChallengeUITests.swift */; };
 		1A61C4602B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C45F2B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift */; };
+		1A61C46E2B29317600C51388 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C46D2B29317600C51388 /* Point.swift */; };
+		1A61C4702B29324C00C51388 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C46F2B29324C00C51388 /* Vector.swift */; };
+		1A61C4722B29351000C51388 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4712B29351000C51388 /* Helpers.swift */; };
+		1A61C4742B2A6C7B00C51388 /* Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4732B2A6C7B00C51388 /* Tick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +45,14 @@
 		1A61C4482B29301C00C51388 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A61C44A2B29301C00C51388 /* RayTracerChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RayTracerChallenge.entitlements; sourceTree = "<group>"; };
 		1A61C44F2B29301D00C51388 /* RayTracerChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RayTracerChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A61C4532B29301D00C51388 /* RayTracerChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeTests.swift; sourceTree = "<group>"; };
+		1A61C4532B29301D00C51388 /* TupleTests.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = TupleTests.swift; sourceTree = "<group>"; tabWidth = 2; };
 		1A61C4592B29301D00C51388 /* RayTracerChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RayTracerChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A61C45D2B29301D00C51388 /* RayTracerChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeUITests.swift; sourceTree = "<group>"; };
 		1A61C45F2B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A61C46D2B29317600C51388 /* Point.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A61C46F2B29324C00C51388 /* Vector.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A61C4712B29351000C51388 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		1A61C4732B2A6C7B00C51388 /* Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,7 @@
 		1A61C4402B29301B00C51388 /* RayTracerChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				1A61C46C2B2930D500C51388 /* Lib */,
 				1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */,
 				1A61C4432B29301B00C51388 /* ContentView.swift */,
 				1A61C4452B29301C00C51388 /* Assets.xcassets */,
@@ -115,7 +124,7 @@
 		1A61C4522B29301D00C51388 /* RayTracerChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A61C4532B29301D00C51388 /* RayTracerChallengeTests.swift */,
+				1A61C4532B29301D00C51388 /* TupleTests.swift */,
 			);
 			path = RayTracerChallengeTests;
 			sourceTree = "<group>";
@@ -127,6 +136,17 @@
 				1A61C45F2B29301D00C51388 /* RayTracerChallengeUITestsLaunchTests.swift */,
 			);
 			path = RayTracerChallengeUITests;
+			sourceTree = "<group>";
+		};
+		1A61C46C2B2930D500C51388 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				1A61C46D2B29317600C51388 /* Point.swift */,
+				1A61C46F2B29324C00C51388 /* Vector.swift */,
+				1A61C4712B29351000C51388 /* Helpers.swift */,
+				1A61C4732B2A6C7B00C51388 /* Tick.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A61C4742B2A6C7B00C51388 /* Tick.swift in Sources */,
 				1A61C4442B29301B00C51388 /* ContentView.swift in Sources */,
 				1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */,
+				1A61C4702B29324C00C51388 /* Vector.swift in Sources */,
+				1A61C4722B29351000C51388 /* Helpers.swift in Sources */,
+				1A61C46E2B29317600C51388 /* Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A61C4542B29301D00C51388 /* RayTracerChallengeTests.swift in Sources */,
+				1A61C4542B29301D00C51388 /* TupleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,10 +445,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RayTracerChallenge/RayTracerChallenge.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RayTracerChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = A338EGZ6J8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -446,10 +472,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RayTracerChallenge/RayTracerChallenge.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RayTracerChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = A338EGZ6J8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
