@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+private struct RenderPoint {
+  var point: CGPoint
+  var color: Color
+}
+
+extension Color {
+  init(_ color: RTColor) {
+    self.init(red: color.red, green: color.green, blue: color.blue)
+  }
+}
+
 struct ContentView: View {
   @State private var position_x = "0"
   @State private var position_y = "1"
@@ -24,11 +35,14 @@ struct ContentView: View {
   @State private var wind_y = "0"
   @State private var wind_z = "0"
 
-  @State private var numTicks = "0"
-
-  @State private var showTicks = false
-
   @State private var runSimulationButtonDisabled = false
+
+  @State private var showCanvas = false
+
+  @State private var renderPoints: [RenderPoint] = []
+
+  private let canvasWidth = 900
+  private let canvasHeight = 550
 
   var body: some View {
     VStack {
@@ -78,18 +92,22 @@ struct ContentView: View {
         .defaultAction /*@END_MENU_TOKEN@*/
       ).disabled(runSimulationButtonDisabled)
 
-      if showTicks {
-        HStack {
-          Text("Ticks taken to hit the ground")
-          Text(numTicks)
-        }
+      if showCanvas {
+        Canvas { context, size in
+          for renderPoint in renderPoints {
+            let rect = CGRect(x: renderPoint.point.x, y: renderPoint.point.y, width: 1, height: 1)
+            context.fill(Path(rect), with: .color(renderPoint.color))
+          }
+        }.frame(width: CGFloat(canvasWidth), height: CGFloat(canvasHeight))
+
       }
     }.padding()
   }
 
   private func runSimulation() {
+    self.renderPoints.removeAll()
     self.runSimulationButtonDisabled = true
-    self.showTicks = true
+    self.showCanvas = true
 
     let position = RTPoint(
       x: Double(self.position_x)!,
@@ -97,11 +115,12 @@ struct ContentView: View {
       z: Double(self.position_z)!
     )
 
-    let velocity = RTVector(
-      x: Double(self.velocity_x)!,
-      y: Double(self.velocity_y)!,
-      z: Double(self.velocity_z)!
-    )
+    let velocity =
+      RTVector(
+        x: Double(self.velocity_x)!,
+        y: Double(self.velocity_y)!,
+        z: Double(self.velocity_z)!
+      ).norm() * 11.25
 
     let gravity = RTVector(
       x: Double(self.gravity_x)!,
@@ -124,8 +143,13 @@ struct ContentView: View {
         projectile = environment.tick(projectile: projectile)
         ticksToGround += 1
 
+        let point = CGPoint(
+          x: projectile.position.x, y: Double(canvasHeight) - projectile.position.y)
+        let color = Color.red
+        let renderPoint = RenderPoint(point: point, color: color)
+
         DispatchQueue.main.async {
-          self.numTicks = String(ticksToGround)
+          renderPoints.append(renderPoint)
         }
       }
 
