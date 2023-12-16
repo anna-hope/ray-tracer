@@ -8,14 +8,10 @@
 import Foundation
 import simd
 
-enum VectorError: Error {
-  case ZeroNorm
-}
-
 infix operator **  // dot
 infix operator !!  // cross
 
-struct RTVector: Equatable {
+struct RTVector: Tuple {
   var simd_repr: simd_double3
 
   var x: Double {
@@ -36,6 +32,10 @@ struct RTVector: Equatable {
 
   init(_ simd_repr: simd_double3) {
     self.simd_repr = simd_repr
+  }
+
+  init(_ tuple: simd_double4) {
+    self.simd_repr = simd_double3(x: tuple.x, y: tuple.y, z: tuple.z)
   }
 
   static func == (lhs: RTVector, rhs: RTVector) -> Bool {
@@ -72,5 +72,9 @@ struct RTVector: Equatable {
 
   func norm() -> Self {
     return RTVector(normalize(self.simd_repr))
+  }
+
+  func tuple() -> simd_double4 {
+    simd_double4(x: self.x, y: self.y, z: self.z, w: 0)
   }
 }

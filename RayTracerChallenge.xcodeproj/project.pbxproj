@@ -20,6 +20,10 @@
 		1A61C4742B2A6C7B00C51388 /* Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4732B2A6C7B00C51388 /* Tick.swift */; };
 		1A61C4762B2BAA9900C51388 /* RTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4752B2BAA9900C51388 /* RTColor.swift */; };
 		1A61C4782B2BBCF900C51388 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4772B2BBCF900C51388 /* ColorTests.swift */; };
+		1A77C1DB2B2CBC0C00573B0E /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C1DA2B2CBC0C00573B0E /* Matrix.swift */; };
+		1A77C1DD2B2CBC2400573B0E /* MatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C1DC2B2CBC2400573B0E /* MatrixTests.swift */; };
+		1A77C1DF2B2CD59600573B0E /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C1DE2B2CD59600573B0E /* Tuple.swift */; };
+		1A77C1E12B2D1E1B00573B0E /* TransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C1E02B2D1E1B00573B0E /* TransformationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,11 @@
 		1A61C4732B2A6C7B00C51388 /* Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tick.swift; sourceTree = "<group>"; };
 		1A61C4752B2BAA9900C51388 /* RTColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTColor.swift; sourceTree = "<group>"; };
 		1A61C4772B2BBCF900C51388 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		1A77C1DA2B2CBC0C00573B0E /* Matrix.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A77C1DC2B2CBC2400573B0E /* MatrixTests.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = MatrixTests.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A77C1DE2B2CD59600573B0E /* Tuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		1A77C1E02B2D1E1B00573B0E /* TransformationTests.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = TransformationTests.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A77C1E22B2E126300573B0E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,7 @@
 				1A61C4452B29301C00C51388 /* Assets.xcassets */,
 				1A61C44A2B29301C00C51388 /* RayTracerChallenge.entitlements */,
 				1A61C4472B29301C00C51388 /* Preview Content */,
+				1A77C1E22B2E126300573B0E /* MyPlayground.playground */,
 			);
 			path = RayTracerChallenge;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 			children = (
 				1A61C4532B29301D00C51388 /* TupleTests.swift */,
 				1A61C4772B2BBCF900C51388 /* ColorTests.swift */,
+				1A77C1DC2B2CBC2400573B0E /* MatrixTests.swift */,
+				1A77C1E02B2D1E1B00573B0E /* TransformationTests.swift */,
 			);
 			path = RayTracerChallengeTests;
 			sourceTree = "<group>";
@@ -151,6 +163,8 @@
 				1A61C4712B29351000C51388 /* Helpers.swift */,
 				1A61C4732B2A6C7B00C51388 /* Tick.swift */,
 				1A61C4752B2BAA9900C51388 /* RTColor.swift */,
+				1A77C1DA2B2CBC0C00573B0E /* Matrix.swift */,
+				1A77C1DE2B2CD59600573B0E /* Tuple.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -286,9 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A61C4742B2A6C7B00C51388 /* Tick.swift in Sources */,
+				1A77C1DF2B2CD59600573B0E /* Tuple.swift in Sources */,
 				1A61C4442B29301B00C51388 /* ContentView.swift in Sources */,
 				1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */,
 				1A61C4702B29324C00C51388 /* RTVector.swift in Sources */,
+				1A77C1DB2B2CBC0C00573B0E /* Matrix.swift in Sources */,
 				1A61C4762B2BAA9900C51388 /* RTColor.swift in Sources */,
 				1A61C4722B29351000C51388 /* Helpers.swift in Sources */,
 				1A61C46E2B29317600C51388 /* RTPoint.swift in Sources */,
@@ -299,7 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A77C1DD2B2CBC2400573B0E /* MatrixTests.swift in Sources */,
 				1A61C4542B29301D00C51388 /* TupleTests.swift in Sources */,
+				1A77C1E12B2D1E1B00573B0E /* TransformationTests.swift in Sources */,
 				1A61C4782B2BBCF900C51388 /* ColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
