@@ -19,78 +19,20 @@ extension Color {
 }
 
 struct ContentView: View {
-  @State private var position_x = "0"
-  @State private var position_y = "1"
-  @State private var position_z = "0"
-
-  @State private var velocity_x = "1"
-  @State private var velocity_y = "1"
-  @State private var velocity_z = "0"
-
-  @State private var gravity_x = "0"
-  @State private var gravity_y = "-0.1"
-  @State private var gravity_z = "0"
-
-  @State private var wind_x = "-0.01"
-  @State private var wind_y = "0"
-  @State private var wind_z = "0"
-
-  @State private var runSimulationButtonDisabled = false
+  @State private var runRenderButtonDisabled = false
 
   @State private var showCanvas = false
 
   @State private var renderPoints: [RenderPoint] = []
 
-  private let canvasWidth = 900
-  private let canvasHeight = 550
+  private let canvasWidth = 500
+  private let canvasHeight = 500
 
   var body: some View {
     VStack {
-      HStack {
-        Text("Projectile")
-          .padding()
-
-        VStack {
-          TextField("Position x", text: $position_x)
-          TextField("Position y", text: $position_y)
-          TextField("Position z", text: $position_z)
-        }.padding()
-
-        VStack {
-          TextField("Velocity x", text: $velocity_x)
-          TextField(
-            "Velocity y",
-            text: $velocity_y)
-          TextField(
-            "Velocity z",
-            text: $velocity_z)
-        }.padding()
-      }
-
-      HStack {
-        Text("Environment").padding()
-
-        VStack {
-          TextField("Gravity x", text: $gravity_x)
-          TextField(
-            "Gravity y",
-            text: $gravity_y)
-          TextField(
-            "Gravity z",
-            text: $gravity_z)
-        }.padding()
-
-        VStack {
-          TextField("Wind x", text: $wind_x)
-          TextField("Wind y", text: $wind_y)
-          TextField("Wind z", text: $wind_z)
-
-        }.padding()
-      }
-
-      Button("Run simulation", action: runSimulation).keyboardShortcut( /*@START_MENU_TOKEN@*/
+      Button("Render", action: runSimulation).keyboardShortcut( /*@START_MENU_TOKEN@*/
         .defaultAction /*@END_MENU_TOKEN@*/
-      ).disabled(runSimulationButtonDisabled)
+      ).disabled(runRenderButtonDisabled)
 
       if showCanvas {
         Canvas { context, size in
@@ -105,57 +47,43 @@ struct ContentView: View {
   }
 
   private func runSimulation() {
-    self.renderPoints.removeAll()
-    self.runSimulationButtonDisabled = true
-    self.showCanvas = true
+    renderPoints.removeAll()
+    runRenderButtonDisabled = true
+    showCanvas = true
 
-    let position = RTPoint(
-      x: Double(self.position_x)!,
-      y: Double(self.position_y)!,
-      z: Double(self.position_z)!
-    )
+    let rayOrigin = RTPoint(x: 0, y: 0, z: -5)
+    let wallZ = 10
+    let wallSize = 7.0
+    let pixelSize = wallSize / Double(canvasWidth)
 
-    let velocity =
-      RTVector(
-        x: Double(self.velocity_x)!,
-        y: Double(self.velocity_y)!,
-        z: Double(self.velocity_z)!
-      ).norm() * 11.25
-
-    let gravity = RTVector(
-      x: Double(self.gravity_x)!,
-      y: Double(self.gravity_y)!,
-      z: Double(self.gravity_z)!
-    )
-
-    let wind = RTVector(
-      x: Double(self.wind_x)!,
-      y: Double(self.wind_y)!,
-      z: Double(self.wind_z)!
-    )
-
-    var ticksToGround = 0
-    var projectile = Projectile(position: position, velocity: velocity)
-    let environment = Environment(gravity: gravity, wind: wind)
+    let half = wallSize / 2
+    let color = RTColor(red: 1, green: 0, blue: 0)
+    let shape = Sphere()
 
     DispatchQueue.global(qos: .userInteractive).async {
-      while projectile.position.y > 0 {
-        projectile = environment.tick(projectile: projectile)
-        ticksToGround += 1
+      for y in 0..<canvasHeight {
+        let worldY = half - pixelSize * Double(y)
 
-        let point = CGPoint(
-          x: projectile.position.x, y: Double(canvasHeight) - projectile.position.y)
-        let color = Color.red
-        let renderPoint = RenderPoint(point: point, color: color)
+        for x in 0..<canvasWidth {
+          let worldX = -half + pixelSize * Double(x)
 
-        DispatchQueue.main.async {
-          renderPoints.append(renderPoint)
+          let position = RTPoint(x: worldX, y: worldY, z: Double(wallZ))
+
+          let ray = Ray(origin: rayOrigin, direction: (position - rayOrigin).norm())
+          let xs = shape.intersect(ray)
+
+          if hit(xs) != nil {
+            DispatchQueue.main.async {
+              let renderPoint = RenderPoint(point: CGPoint(x: x, y: y), color: Color(color))
+              renderPoints.append(renderPoint)
+            }
+          }
         }
-      }
 
+      }
     }
 
-    runSimulationButtonDisabled = false
+    runRenderButtonDisabled = false
   }
 }
 

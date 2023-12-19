@@ -8,8 +8,12 @@
 import Foundation
 import simd
 
-struct RTMatrix4x4 {
+struct Matrix: Equatable {
   private var simd_repr: simd_double4x4
+
+  var inverse: Self {
+    Self.init(simd_repr.inverse)
+  }
 
   init(_ simd_repr: simd_double4x4) {
     self.simd_repr = simd_repr
@@ -36,7 +40,7 @@ struct RTMatrix4x4 {
     return Self.init(result)
   }
 
-  static func eye() -> Self {
+  static func identity() -> Self {
     Self.init(matrix_identity_double4x4)
   }
 
@@ -46,10 +50,6 @@ struct RTMatrix4x4 {
 
   static func scaling(x: Double, y: Double, z: Double) -> Self {
     Self.init([[x, 0, 0, 0], [0, y, 0, 0], [0, 0, z, 0], [0, 0, 0, 1]])
-  }
-
-  func inverse() -> Self {
-    Self.init(self.simd_repr.inverse)
   }
 
   static func rotation_x(_ radians: Double) -> Self {

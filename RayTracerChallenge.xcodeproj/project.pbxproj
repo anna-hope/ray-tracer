@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A06C3462B30CF8C005A3BBB /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06C3452B30CF8C005A3BBB /* Ray.swift */; };
+		1A06C3482B30D04A005A3BBB /* SphereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06C3472B30D04A005A3BBB /* SphereTests.swift */; };
+		1A06C34A2B30D38F005A3BBB /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06C3492B30D38F005A3BBB /* Sphere.swift */; };
+		1A06C34C2B30D429005A3BBB /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06C34B2B30D429005A3BBB /* Shape.swift */; };
+		1A06C34E2B32004D005A3BBB /* Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06C34D2B32004D005A3BBB /* Intersection.swift */; };
+		1A06C3502B3218A8005A3BBB /* RayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06C34F2B3218A8005A3BBB /* RayTests.swift */; };
 		1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */; };
 		1A61C4442B29301B00C51388 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61C4432B29301B00C51388 /* ContentView.swift */; };
 		1A61C4462B29301C00C51388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A61C4452B29301C00C51388 /* Assets.xcassets */; };
@@ -44,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A06C3452B30CF8C005A3BBB /* Ray.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Ray.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A06C3472B30D04A005A3BBB /* SphereTests.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SphereTests.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A06C3492B30D38F005A3BBB /* Sphere.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A06C34B2B30D429005A3BBB /* Shape.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; tabWidth = 2; };
+		1A06C34D2B32004D005A3BBB /* Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Intersection.swift; path = RayTracerChallenge/Lib/Intersection.swift; sourceTree = SOURCE_ROOT; };
+		1A06C34F2B3218A8005A3BBB /* RayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTests.swift; sourceTree = "<group>"; };
 		1A61C43E2B29301B00C51388 /* RayTracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayTracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A61C4412B29301B00C51388 /* RayTracerChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayTracerChallengeApp.swift; sourceTree = "<group>"; };
 		1A61C4432B29301B00C51388 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +154,9 @@
 				1A61C4772B2BBCF900C51388 /* ColorTests.swift */,
 				1A77C1DC2B2CBC2400573B0E /* MatrixTests.swift */,
 				1A77C1E02B2D1E1B00573B0E /* TransformationTests.swift */,
+				1A06C3472B30D04A005A3BBB /* SphereTests.swift */,
+				1A06C34F2B3218A8005A3BBB /* RayTests.swift */,
+				1A06C34D2B32004D005A3BBB /* Intersection.swift */,
 			);
 			path = RayTracerChallengeTests;
 			sourceTree = "<group>";
@@ -165,6 +180,9 @@
 				1A61C4752B2BAA9900C51388 /* RTColor.swift */,
 				1A77C1DA2B2CBC0C00573B0E /* Matrix.swift */,
 				1A77C1DE2B2CD59600573B0E /* Tuple.swift */,
+				1A06C3452B30CF8C005A3BBB /* Ray.swift */,
+				1A06C3492B30D38F005A3BBB /* Sphere.swift */,
+				1A06C34B2B30D429005A3BBB /* Shape.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -303,10 +321,14 @@
 				1A77C1DF2B2CD59600573B0E /* Tuple.swift in Sources */,
 				1A61C4442B29301B00C51388 /* ContentView.swift in Sources */,
 				1A61C4422B29301B00C51388 /* RayTracerChallengeApp.swift in Sources */,
+				1A06C3462B30CF8C005A3BBB /* Ray.swift in Sources */,
+				1A06C34A2B30D38F005A3BBB /* Sphere.swift in Sources */,
 				1A61C4702B29324C00C51388 /* RTVector.swift in Sources */,
+				1A06C34C2B30D429005A3BBB /* Shape.swift in Sources */,
 				1A77C1DB2B2CBC0C00573B0E /* Matrix.swift in Sources */,
 				1A61C4762B2BAA9900C51388 /* RTColor.swift in Sources */,
 				1A61C4722B29351000C51388 /* Helpers.swift in Sources */,
+				1A06C34E2B32004D005A3BBB /* Intersection.swift in Sources */,
 				1A61C46E2B29317600C51388 /* RTPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +338,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A77C1DD2B2CBC2400573B0E /* MatrixTests.swift in Sources */,
+				1A06C3482B30D04A005A3BBB /* SphereTests.swift in Sources */,
+				1A06C3502B3218A8005A3BBB /* RayTests.swift in Sources */,
 				1A61C4542B29301D00C51388 /* TupleTests.swift in Sources */,
 				1A77C1E12B2D1E1B00573B0E /* TransformationTests.swift in Sources */,
 				1A61C4782B2BBCF900C51388 /* ColorTests.swift in Sources */,

@@ -8,7 +8,11 @@
 import Foundation
 import simd
 
-infix operator **  // dot
+precedencegroup DotPrecedence {
+  higherThan: MultiplicationPrecedence
+}
+
+infix operator ** : DotPrecedence
 infix operator !!  // cross
 
 struct RTVector: Tuple {
