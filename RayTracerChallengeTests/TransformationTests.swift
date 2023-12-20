@@ -19,8 +19,8 @@ final class TransformationTests: XCTestCase {
   }
 
   func testMultiplyingByInverseTranslationMatrix() {
-    let transform = Matrix.translation(x: 5, y: -3, z: 2)
-    let inv = transform.inverse
+    var transform = Matrix.translation(x: 5, y: -3, z: 2)
+    let inv = transform.inverse()
     let p = RTPoint(x: -3, y: 4, z: 5)
     XCTAssertEqual(inv * p, RTPoint(x: -8, y: 7, z: 3))
   }
@@ -41,8 +41,8 @@ final class TransformationTests: XCTestCase {
 
   func testInverseXRotation() {
     let p = RTPoint(x: 0, y: 1, z: 0)
-    let half_quarter = Matrix.rotation_x(Double.pi / 4)
-    let inv = half_quarter.inverse
+    var half_quarter = Matrix.rotation_x(Double.pi / 4)
+    let inv = half_quarter.inverse()
     XCTAssertEqual(inv * p, RTPoint(x: 0, y: sqrt_2_over_2, z: -sqrt_2_over_2))
   }
 

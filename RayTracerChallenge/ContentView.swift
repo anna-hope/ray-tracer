@@ -23,16 +23,33 @@ struct ContentView: View {
 
   @State private var showCanvas = false
 
+  @State private var showClearCanvas = false
+
   @State private var renderPoints: [RenderPoint] = []
+
+  @State private var progress = 0.0
+  @State private var showProgress = false
 
   private let canvasWidth = 500
   private let canvasHeight = 500
 
   var body: some View {
     VStack {
-      Button("Render", action: runSimulation).keyboardShortcut( /*@START_MENU_TOKEN@*/
-        .defaultAction /*@END_MENU_TOKEN@*/
-      ).disabled(runRenderButtonDisabled)
+      HStack {
+        Button("Render", action: runSimulation).keyboardShortcut( /*@START_MENU_TOKEN@*/
+          .defaultAction /*@END_MENU_TOKEN@*/
+        ).disabled(runRenderButtonDisabled)
+
+        if showClearCanvas {
+          Button("Clear") {
+            renderPoints.removeAll()
+          }
+        }
+      }
+
+      if showProgress {
+        ProgressView(value: progress)
+      }
 
       if showCanvas {
         Canvas { context, size in
@@ -41,13 +58,15 @@ struct ContentView: View {
             context.fill(Path(rect), with: .color(renderPoint.color))
           }
         }.frame(width: CGFloat(canvasWidth), height: CGFloat(canvasHeight))
-
       }
+
     }.padding()
   }
 
   private func runSimulation() {
     renderPoints.removeAll()
+
+    showProgress = true
     runRenderButtonDisabled = true
     showCanvas = true
 
@@ -59,6 +78,9 @@ struct ContentView: View {
     let half = wallSize / 2
     let color = RTColor(red: 1, green: 0, blue: 0)
     let shape = Sphere()
+
+    var points: [RenderPoint] = []
+    let progressChunk = 1 / Double(canvasHeight)
 
     DispatchQueue.global(qos: .userInteractive).async {
       for y in 0..<canvasHeight {
@@ -73,17 +95,27 @@ struct ContentView: View {
           let xs = shape.intersect(ray)
 
           if hit(xs) != nil {
-            DispatchQueue.main.async {
-              let renderPoint = RenderPoint(point: CGPoint(x: x, y: y), color: Color(color))
-              renderPoints.append(renderPoint)
-            }
+            let renderPoint = RenderPoint(point: CGPoint(x: x, y: y), color: Color(color))
+            points.append(renderPoint)
           }
         }
 
+        DispatchQueue.main.async {
+          progress += progressChunk
+        }
+      }
+
+      DispatchQueue.main.async {
+        for point in points {
+          renderPoints.append(point)
+        }
+
+        runRenderButtonDisabled = false
+        showClearCanvas = true
+        showProgress = false
+        progress = 0.0
       }
     }
-
-    runRenderButtonDisabled = false
   }
 }
 

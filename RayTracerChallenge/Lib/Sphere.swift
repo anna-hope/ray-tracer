@@ -16,7 +16,7 @@ class Sphere: Shape {
   }
 
   func intersect(_ ray: Ray) -> [Intersection] {
-    let ray = ray.transform(transformation.inverse)
+    let ray = ray.transform(transformation.inverse())
     let sphere_to_ray = ray.origin - RTPoint(x: 0, y: 0, z: 0)
 
     let a = ray.direction ** ray.direction

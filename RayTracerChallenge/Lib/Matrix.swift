@@ -10,10 +10,7 @@ import simd
 
 struct Matrix: Equatable {
   private var simd_repr: simd_double4x4
-
-  var inverse: Self {
-    Self.init(simd_repr.inverse)
-  }
+  private var _inverse: simd_double4x4?
 
   init(_ simd_repr: simd_double4x4) {
     self.simd_repr = simd_repr
@@ -28,6 +25,13 @@ struct Matrix: Equatable {
     }
 
     self.simd_repr = simd_double4x4(simd_columns)
+  }
+
+  mutating func inverse() -> Self {
+    if _inverse == nil {
+      _inverse = simd_repr.inverse
+    }
+    return Self.init(_inverse!)
   }
 
   static func * <T: Tuple>(lhs: Self, rhs: T) -> T {
@@ -109,4 +113,5 @@ struct Matrix: Equatable {
   ) -> Self {
     Self.shearing(xy, xz, yx, yz, zx, zy) * self
   }
+
 }

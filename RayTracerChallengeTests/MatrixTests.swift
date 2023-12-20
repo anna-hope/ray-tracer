@@ -36,8 +36,8 @@ final class MatrixTests: XCTestCase {
   }
 
   func testMultiplyingInverseScalingMatrix() {
-    let transform = Matrix.scaling(x: 2, y: 3, z: 4)
-    let inv = transform.inverse
+    var transform = Matrix.scaling(x: 2, y: 3, z: 4)
+    let inv = transform.inverse()
     let v = RTVector(x: -4, y: 6, z: 8)
     XCTAssertEqual(inv * v, RTVector(x: -2, y: 2, z: 2))
   }
